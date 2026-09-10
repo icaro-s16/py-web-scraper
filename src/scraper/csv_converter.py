@@ -25,7 +25,7 @@ def __get_schools_budget_dict(schools_budget: List[SchoolBudget]) -> Optional[Di
     return res 
 
 
-def get_csv_results(csv_name:str, schools_budget: List[SchoolBudget]) -> None:
+def scraper_results_to_csv(csv_name:str, schools_budget: List[SchoolBudget]) -> None:
     if not len(schools_budget):
         print("ERROR: Invalid schools budget list")
         return 

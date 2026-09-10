@@ -1,7 +1,7 @@
 from scraper.scraper_core   import scraper_run
 from scraper.school_budget  import SchoolBudget
 from typing                 import List
-from formatter.format       import get_csv_results
+from scraper.csv_converter  import scraper_results_to_csv
 
 if __name__ == "__main__":
     start_page: int = int(input("Enter the starting page:"))
@@ -18,7 +18,7 @@ if __name__ == "__main__":
         final_page=final_page
     )
     csv_name: str = input("CSV filename (no .csv needed):")
-    get_csv_results(
+    scraper_results_to_csv(
         csv_name, 
         schools_budget
     )
